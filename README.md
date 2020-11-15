@@ -19,7 +19,7 @@ As a user, I can search for specific employees in the search form bar, which wil
 The table header first and last names will also sort employees alphabetically if the first and last name table header are clicked.
 
 
-![Employee Directory]()
+![Employee Directory](https://github.com/kent28808/Employee-Directory/blob/main/public/Employee.gif)
 
 ## Deployed Link
 * [Employee Directory](https://kent28808.github.io/Employee-Directory/)
