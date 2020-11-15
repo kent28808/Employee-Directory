@@ -1,6 +1,6 @@
 import React from "react";
 import EmployeeCard from "./components/EmployeeCard";
-// import SearchForm from "./components/Search";
+import SearchForm from "./components/Search";
 import Wrapper from "./components/Wrapper";
 import Col from "./components/Column";
 import API from "./utils/API";
@@ -28,6 +28,28 @@ class App extends React.Component {
       .catch((err) => console.log(err));
   }
 
+  searchEmployee = (filter) => {
+    console.log('Search', filter);
+    const filteredList = this.state.employees.filter((employee) => {
+      let values = Object.values(employee).join('').toLowerCase();
+      return values.indexOf(filter.toLowerCase()) !== -1;
+    });
+    this.setState({ employees: filteredList });
+  };
+
+  handleInputChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+    console.log('Handle ', this.state.search);
+  };
+
+  handleFormSubmit = (e) => {
+    e.preventDefault();
+    console.log('Button Clicked', this.state.search, e);
+    this.searchEmployee(this.state.search);
+  };
+
   render() {
     return (
       <Wrapper>
@@ -35,7 +57,11 @@ class App extends React.Component {
           <div className="row">
             <Col size="md-4">
               <h2>Employee Directory</h2>
-             
+              <SearchForm
+                value={this.state.search}
+                handleInputChange={this.handleInputChange}
+                handleFormSubmit={this.handleFormSubmit}
+              />
             </Col>
           </div>
 
