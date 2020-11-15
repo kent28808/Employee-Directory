@@ -50,6 +50,23 @@ class App extends React.Component {
     this.searchEmployee(this.state.search);
   };
 
+  handleClickname = (e) => {
+    const namesArray = this.state.employees;
+    const alpha = namesArray.sort(function (a, b) {
+      var nameA = a.name.toUpperCase();
+      var nameB = b.name.toUpperCase();
+
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+      return 0;
+    })
+    this.setState({ employees: alpha })
+  }
+
   render() {
     return (
       <Wrapper>

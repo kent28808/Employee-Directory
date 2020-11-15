@@ -14,7 +14,9 @@
 
 
 ## Description
-
+This application uses randomuser.me api to populate an employee directory with random employee photos, names, emails, phone numbers and locations.  
+As a user, I can search for specific employees in the search form bar, which will bring up the specific employee information for that individual.
+The table header first and last names will also sort employees alphabetically if the first and last name table header are clicked.
 
 
 ![Employee Directory]()
@@ -25,17 +27,13 @@
 
 
 ## Built With
-
+* [React.js](https://reactjs.org/)
 
 ## Installation
 
 ```
 npm install
 ```
-
-## Usage 
-
-
 
 ## Contributions
 
@@ -51,7 +49,7 @@ MIT
 ## Tests
 
 ```
-npm start
+npm run test
 ```
 
 ## Questions
