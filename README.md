@@ -22,7 +22,7 @@ The table header first and last names will also sort employees alphabetically if
 ![Employee Directory]()
 
 ## Deployed Link
-* [Employee Directory]()
+* [Employee Directory](https://kent28808.github.io/Employee-Directory/)
 
 
 
